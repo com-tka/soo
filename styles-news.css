@@ -1,0 +1,113 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Global styles */
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Tahoma', sans-serif;
+  overflow-x: hidden;
+  direction: rtl; /* اتجاه النص من اليمين لليسار */
+}
+
+/* Header styles */
+header {
+  background: linear-gradient(90deg, #4b6cb7, #182848);
+  color: #fff;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Main styles */
+main {
+  padding: 80px 20px; /* Added padding for fixed header */
+}
+
+.news-item, .blog-item {
+  background-color: #2c2c2c;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.news-item h2, .blog-item h3 {
+  color: #ffcc00;
+}
+
+.btn {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  margin: 5px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+/* New styles for images */
+.news-item img, .blog-item img {
+  width: 100%; /* اجعل الصورة تأخذ العرض الكامل */
+  height: auto; /* حافظ على نسبة العرض إلى الارتفاع */
+  border-radius: 10px; /* اجعل زوايا الصورة دائرية لتتناسب مع المربع */
+  display: block; /* اجعلها كتلة لتجنب المسافات أسفل الصورة */
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background-color: #3c3c3c;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: left; /* تغيير إلى اليسار */
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}

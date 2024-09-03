@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الفرق - منظمة سوشا</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <!-- شعار دائري واسم المنظمة -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.jpg" alt="SOSHA Logo" class="logo-img">
+                </a>
+                <div class="logo-text">SOSHA منظمة</div>
+            </div>
+
+            <!-- قائمة التنقل الرئيسية -->
+            <nav class="main-nav">
+                <ul class="navbar">
+                    <li><a href="teams.html" class="nav-button active">الفرق</a></li>
+                    <li><a href="projects.html" class="nav-button">المشاريع</a></li>
+                </ul>
+            </nav>
+            
+            <!-- أيقونة قائمة الهامبرغر -->
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- قائمة الهامبرغر المخفية -->
+            <nav class="hamburger-nav">
+                <ul class="hamburger-navbar">
+                    <li><a href="about.html">عن المنظمة</a></li>
+                    <li><a href="news.html">أخبار المنظمة</a></li>
+                    <li><a href="#">الوظائف</a></li>
+                    <li><a href="#">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+     <!-- Teams Section -->
+<section class="teams-section">
+    <div class="container">
+        <h1 class="section-title">الفرق</h1>
+        <p class="section-description">تعرف على الفرق المختلفة داخل منظمة سوشا والذين يعملون بجد لتقديم أفضل المبادرات والمشاريع.</p>
+        
+        <div class="teams-list">
+            <!-- Team 1 -->
+            <div class="team-card">
+                <img src="team1.jpg" alt="Team 1" class="team-img">
+                <h3 class="team-name">S11 فريق</h3>
+                <p class="team-code">S11 :كود الفريق</p>
+                <p class="team-members">عدد الأعضاء: 15</p>
+                <p class="team-strength">قوة الفريق: 9.5/10</p>
+                <img src="top1-icon.png" alt="Top 1" class="team-rank-icon">
+                <p class="team-description">Staylor فريق مسئول عن متجر</p>
+                <a href="team-details-S11.html" class="dynamic-button">اقرأ المزيد</a>
+            </div>
+            
+            <!-- Team 2 -->
+            <div class="team-card">
+                <img src="team2.jpg" alt="Team 2" class="team-img">
+                <h3 class="team-name">فريق التكنولوجيا</h3>
+                <p class="team-code">كود الفريق: S12</p>
+                <p class="team-members">عدد الأعضاء: 20</p>
+                <p class="team-strength">قوة الفريق: 8.7/10</p>
+                <img src="top2-icon.png" alt="Top 2" class="team-rank-icon">
+                <p class="team-description">متخصص في تطوير البرمجيات والحلول التقنية لمختلف المشاريع.</p>
+                <a href="team-details-S12.html" class="dynamic-button">اقرأ المزيد</a>
+            </div>
+            
+            <!-- Team 3 -->
+            <div class="team-card">
+                <img src="team3.jpg" alt="Team 3" class="team-img">
+                <h3 class="team-name">فريق الموارد البشرية</h3>
+                <p class="team-code">كود الفريق: S13</p>
+                <p class="team-members">عدد الأعضاء: 10</p>
+                <p class="team-strength">قوة الفريق: 8.0/10</p>
+                <img src="top3-icon.png" alt="Top 3" class="team-rank-icon">
+                <p class="team-description">يعنى بإدارة الموارد البشرية وتطوير السياسات الداخلية للمنظمة.</p>
+                <a href="team-details-S13.html" class="dynamic-button">اقرأ المزيد</a>
+            </div>
+
+            <!-- Team 4 -->
+            <div class="team-card">
+                <img src="team4.jpg" alt="Team 4" class="team-img">
+                <h3 class="team-name">S14 فريق</h3>
+                <p class="team-code">S14 :كود الفريق</p>
+                <p class="team-members">عدد الأعضاء: 18</p>
+                <p class="team-strength">قوة الفريق: 8.5/10</p>
+                <img src="top4-icon.png" alt="Top 4" class="team-rank-icon">
+                <p class="team-description">فريق مخصص لتطوير حلول جديدة في مجال التسويق.</p>
+                <a href="team-details-S14.html" class="dynamic-button">اقرأ المزيد</a>
+            </div>
+
+            <!-- Team 5 -->
+            <div class="team-card">
+                <img src="team5.jpg" alt="Team 5" class="team-img">
+                <h3 class="team-name">S15 فريق</h3>
+                <p class="team-code">S15 :كود الفريق</p>
+                <p class="team-members">عدد الأعضاء: 22</p>
+                <p class="team-strength">قوة الفريق: 9.0/10</p>
+                <img src="top5-icon.png" alt="Top 5" class="team-rank-icon">
+                <p class="team-description">يعمل على تحسين تجربة العملاء وتطوير استراتيجيات الخدمة.</p>
+                <a href="team-details-S15.html" class="dynamic-button">اقرأ المزيد</a>
+            </div>
+
+            <!-- Team 6 -->
+            <div class="team-card">
+                <img src="team6.jpg" alt="Team 6" class="team-img">
+                <h3 class="team-name">S16 فريق</h3>
+                <p class="team-code">S16 :كود الفريق</p>
+                <p class="team-members">عدد الأعضاء: 12</p>
+                <p class="team-strength">قوة الفريق: 7.8/10</p>
+                <img src="top6-icon.png" alt="Top 6" class="team-rank-icon">
+                <p class="team-description">مخصص لإدارة وتحليل البيانات وتحسين الأداء.</p>
+                <a href="team-details-S16.html" class="dynamic-button">اقرأ المزيد</a>
+            </div>
+
+            <!-- Team 7 -->
+            <div class="team-card">
+                <img src="team7.jpg" alt="Team 7" class="team-img">
+                <h3 class="team-name">S17 فريق</h3>
+                <p class="team-code">S17 :كود الفريق</p>
+                <p class="team-members">عدد الأعضاء: 14</p>
+                <p class="team-strength">قوة الفريق: 8.2/10</p>
+                <img src="top7-icon.png" alt="Top 7" class="team-rank-icon">
+                <p class="team-description">يعمل على تطوير استراتيجيات النمو والابتكار.</p>
+                <a href="team-details-S17.html" class="dynamic-button">اقرأ المزيد</a>
+            </div>
+
+            <!-- Team 8 -->
+            <div class="team-card">
+                <img src="team8.jpg" alt="Team 8" class="team-img">
+                <h3 class="team-name">S18 فريق</h3>
+                <p class="team-code">S18 :كود الفريق</p>
+                <p class="team-members">عدد الأعضاء: 17</p>
+                <p class="team-strength">قوة الفريق: 8.9/10</p>
+                <img src="top8-icon.png" alt="Top 8" class="team-rank-icon">
+                <p class="team-description">مخصص لإدارة المشاريع وتحسين العمليات.</p>
+                <a href="team-details-S18.html" class="dynamic-button">اقرأ المزيد</a>
+            </div>
+
+            <!-- Team 9 -->
+            <div class="team-card">
+                <img src="team9.jpg" alt="Team 9" class="team-img">
+                <h3 class="team-name">S19 فريق</h3>
+                <p class="team-code">S19 :كود الفريق</p>
+                <p class="team-members">عدد الأعضاء: 11</p>
+                <p class="team-strength">قوة الفريق: 8.1/10</p>
+                <img src="top9-icon.png" alt="Top 9" class="team-rank-icon">
+                <p class="team-description">يعمل على تطوير استراتيجيات التسويق الرقمي.</p>
+                <a href="team-details-S19.html" class="dynamic-button">اقرأ المزيد</a>
+            </div>
+
+            <!-- Team 10 -->
+            <div class="team-card">
+                <img src="team10.jpg" alt="Team 10" class="team-img">
+                <h3 class="team-name">S20 فريق</h3>
+                <p class="team-code">S20 :كود الفريق</p>
+                <p class="team-members">عدد الأعضاء: 19</p>
+                <p class="team-strength">قوة الفريق: 9.2/10</p>
+                <img src="top10-icon.png" alt="Top 10" class="team-rank-icon">
+                <p class="team-description">فريق مخصص لإدارة الشراكات وتطوير العلاقات.</p>
+                <a href="team-details-S20.html" class="dynamic-button">اقرأ المزيد</a>
+            </div>
+
+            <!-- Team 11 -->
+            <div class="team-card">
+                <img src="team11.jpg" alt="Team 11" class="team-img">
+                <h3 class="team-name">S21 فريق</h3>
+                <p class="team-code">S21 :كود الفريق</p>
+                <p class="team-members">عدد الأعضاء: 16</p>
+                <p class="team-strength">قوة الفريق: 8.4/10</p>
+                <img src="top11-icon.png" alt="Top 11" class="team-rank-icon">
+                <p class="team-description">فريق مخصص للتحليل والتخطيط الاستراتيجي.</p>
+                <a href="team-details-S21.html" class="dynamic-button">اقرأ المزيد</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="social-media-icons">
+                <a href="https://www.facebook.com/yourpage" target="_blank">
+                    <img src="facebook-icon.png" alt="Facebook" class="social-icon">
+                </a>
+                <a href="https://yourchannel" target="_blank">
+                    <img src="telegram-icon.png" alt="Telegram" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/yourprofile" target="_blank">
+                    <img src="instagram-icon.png" alt="Instagram" class="social-icon">
+                </a>
+                <a href="https://www.wattpad.com/user/yourprofile" target="_blank">
+                    <img src="wattpad-icon.png" alt="Wattpad" class="social-icon">
+                </a>
+            </div>
+            <div class="footer-links">
+                <div class="footer-links-left">
+                    <a href="#">الأسئلة الشائعة (FAQ)</a>
+                    <a href="#">الوظائف</a>
+                    <a href="#">اتصل بنا</a>
+                </div>
+                <div class="footer-links-right">
+                    <a href="#">سياسة الخصوصية</a>
+                    <a href="#">الشروط والأحكام</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const hamburgerNav = document.querySelector('.hamburger-nav');
+            hamburgerNav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

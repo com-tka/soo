@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منظمة سوشا</title>
+    <link rel="stylesheet" href="styles-about.css">
+    <link rel="stylesheet" href="styles.css"> <!-- ربط ملف CSS المشترك --
+</head>
+<body>
+    <!-- Header Section -->
+      <header>
+        <div class="header-container">
+            <!-- شعار دائري واسم المنظمة -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.jpg" alt="SOSHA Logo" class="logo-img">
+                </a>
+                <div class="logo-text">SOSHA منظمة</div>
+            </div>
+
+<!-- قائمة التنقل الرئيسية -->
+<nav class="main-nav">
+    <ul class="navbar">
+        <li><a href="teams.html" class="nav-button">الفرق</a></li>
+        <!-- تعديل الرابط إلى projects.html -->
+        <li><a href="projects.html" class="nav-button">المشاريع</a></li>
+    </ul>
+</nav>
+
+
+            
+            <!-- أيقونة قائمة الهامبرغر -->
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- قائمة الهامبرغر المخفية -->
+            <nav class="hamburger-nav">
+                <ul class="hamburger-navbar">
+                    <li><a href="about.html">عن المنظمة</a></li>
+                    <li><a href="news.html">أخبار المنظمة</a></li>
+                    <li><a href="#">الوظائف</a></li>
+                    <li><a href="#">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- نبذة عن المنظمة -->
+    <section>
+        <h2>نبذة عن المنظمة</h2>
+        <p>تطمح منظمة سوشا إلى أن تكون رائدة في إعداد قادة مبتكرين وفرق عمل متميزة، قادرة على تنفيذ مشاريع رائدة تخدم المجتمع وتعزز من قدرات الشباب لمواكبة العصر التكنولوجي. نسعى لبناء بيئة محفزة تساهم في تكوين أعضاء ملتزمين بأهدافنا ومبادئنا، حيث يتحلى كل فرد بالولاء للمنظمة ويعمل بشغف لتحقيق رؤيتها. نهدف إلى تقديم الدعم والتوجيه لأعضائنا، مما يمكنهم من تطوير مهاراتهم وكفاءاتهم، ويعزز من قدرتهم على مواجهة تحديات المستقبل بفعالية وإبداع.</p>
+    </section>
+
+    <!-- تاريخ المنظمة -->
+    <section>
+        <h2>تاريخ المنظمة</h2>
+        <div>
+            <div>
+                <h3>2024</h3>
+                <p>تأسيس المنظمة وبدء العمل على أول مشروع لها.</p>
+            </div>
+            <div>
+                <h3>2025</h3>
+                <p>التوسع في الخدمات والوصول إلى قاعدة عملاء أكبر.</p>
+            </div>
+            <!-- يمكن إضافة المزيد من العناصر الزمنية هنا -->
+        </div>
+    </section>
+    <!-- مؤسس المنظمة -->
+    <section class="founder-section">
+        <h2>مؤسس المنظمة</h2>
+        <img src="founder.jpg" alt="صورة مؤسس المنظمة">
+        <div>
+            <h3>موسى محمد</h3>
+            <p></p>
+            <a href="https://example.com">المزيد عن المؤسس</a>
+        </div>
+    </section>
+    <!-- قيم المنظمة -->
+    <section>
+        <h2>قيم المنظمة</h2>
+        <div>
+            <h3>الابتكار</h3>
+            <p>نحن نسعى دائماً لتقديم حلول مبتكرة تلبي احتياجات عملائنا المتغيرة.</p>
+        </div>
+        <div>
+            <h3>النزاهة</h3>
+            <p>الالتزام بأعلى معايير الأخلاق والنزاهة في جميع أعمالنا.</p>
+        </div>
+        <!-- يمكن إضافة المزيد من القيم هنا -->
+    </section>
+ 
+    <!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="social-media-icons">
+            <a href="https://www.facebook.com/yourpage" target="_blank">
+                <img src="facebook-icon.png" alt="Facebook" class="social-icon">
+            </a>
+            <a href="https://yourchannel" target="_blank">
+                <img src="telegram-icon.png" alt="Telegram" class="social-icon">
+            </a>
+            <a href="https://www.instagram.com/yourprofile" target="_blank">
+                <img src="instagram-icon.png" alt="Instagram" class="social-icon">
+            </a>
+            <a href="https://www.wattpad.com/user/yourprofile" target="_blank">
+                <img src="wattpad-icon.png" alt="Wattpad" class="social-icon">
+            </a>
+        </div>
+        <div class="footer-links">
+            <div class="footer-links-left">
+                <a href="#">الأسئلة الشائعة (FAQ)</a>
+                <a href="#">الوظائف</a>
+                <a href="#">اتصل بنا</a>
+            </div>
+            <div class="footer-links-right">
+                <a href="#">سياسة الخصوصية</a>
+                <a href="#">الشروط والأحكام</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+ 
+ <script>
+        function toggleMenu() {
+            const hamburgerNav = document.querySelector('.hamburger-nav');
+            hamburgerNav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

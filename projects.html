@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المشاريع - منظمة سوشا</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+      <header>
+        <div class="header-container">
+            <!-- شعار دائري واسم المنظمة -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.jpg" alt="SOSHA Logo" class="logo-img">
+                </a>
+                <div class="logo-text">SOSHA منظمة</div>
+            </div>
+
+            <!-- قائمة التنقل الرئيسية -->
+<nav class="main-nav">
+    <ul class="navbar">
+        <li><a href="teams.html" class="nav-button">الفرق</a></li>
+        <li><a href="projects.html" class="nav-button">المشاريع</a></li>
+    </ul>
+</nav>
+
+            
+            <!-- أيقونة قائمة الهامبرغر -->
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- قائمة الهامبرغر المخفية -->
+            <nav class="hamburger-nav">
+                <ul class="hamburger-navbar">
+                    <li><a href="about.html">عن المنظمة</a></li>
+                    <li><a href="news.html">أخبار المنظمة</a></li>
+                    <li><a href="#">الوظائف</a></li>
+                    <li><a href="#">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+ <!-- قسم قائمة المشاريع -->
+    <section class="projects-section">
+        <div class="container">
+            <h1 class="section-title">المشاريع</h1>
+            <p class="section-description">استكشف المشاريع الحالية والمكتملة في منظمة سوشا، مع إمكانية تصنيفها حسب الفريق أو النوع.</p>
+            
+            <!-- تصنيف المشاريع -->
+            <div class="project-filter">
+                <select id="filter-type" class="filter-dropdown">
+                    <option value="all">جميع المشاريع</option>
+                    <option value="software-development">تطوير برمجيات</option>
+                    <option value="web-design">تصميم مواقع</option>
+                    <option value="ecommerce">متاجر إلكترونية</option>
+                    <option value="marketing-agency">وكالة تسويق</option>
+                    <option value="design-agency">وكالة تصميم</option>
+                </select>
+            </div>
+            
+            <!-- قائمة المشاريع -->
+            <div class="projects-list">
+                <!-- مشروع 1 -->
+                <div class="project-card" data-category="software-development">
+                    <img src="project1.jpg" alt="مشروع 1" class="project-img">
+                    <h3 class="project-name">مشروع تطوير برمجيات 1</h3>
+                    <p class="project-status">الحالة: قيد التنفيذ</p>
+                    <a href="project-details.html?project=1" class="dynamic-button">عرض التفاصيل</a>
+                </div>
+                
+                <!-- مشروع 2 -->
+                <div class="project-card" data-category="web-design">
+                    <img src="project2.jpg" alt="مشروع 2" class="project-img">
+                    <h3 class="project-name">مشروع تصميم موقع 2</h3>
+                    <p class="project-status">الحالة: مكتمل</p>
+                    <a href="project-details.html?project=2" class="dynamic-button">عرض التفاصيل</a>
+                </div>
+                
+                <!-- مشروع 3 -->
+                <div class="project-card" data-category="ecommerce">
+                    <img src="project3.jpg" alt="مشروع 3" class="project-img">
+                    <h3 class="project-name">متجر إلكتروني 3</h3>
+                    <p class="project-status">الحالة: قيد التنفيذ</p>
+                    <a href="project-details.html?project=3" class="dynamic-button">عرض التفاصيل</a>
+                </div>
+
+                <!-- أضف المزيد من المشاريع حسب الحاجة -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="social-media-icons">
+            <a href="https://www.facebook.com/yourpage" target="_blank">
+                <img src="facebook-icon.png" alt="Facebook" class="social-icon">
+            </a>
+            <a href="https://yourchannel" target="_blank">
+                <img src="telegram-icon.png" alt="Telegram" class="social-icon">
+            </a>
+            <a href="https://www.instagram.com/yourprofile" target="_blank">
+                <img src="instagram-icon.png" alt="Instagram" class="social-icon">
+            </a>
+            <a href="https://www.wattpad.com/user/yourprofile" target="_blank">
+                <img src="wattpad-icon.png" alt="Wattpad" class="social-icon">
+            </a>
+        </div>
+        <div class="footer-links">
+            <div class="footer-links-left">
+                <a href="#">الأسئلة الشائعة (FAQ)</a>
+                <a href="#">الوظائف</a>
+                <a href="#">اتصل بنا</a>
+            </div>
+            <div class="footer-links-right">
+                <a href="#">سياسة الخصوصية</a>
+                <a href="#">الشروط والأحكام</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+ <script>
+        function toggleMenu() {
+            const hamburgerNav = document.querySelector('.hamburger-nav');
+            hamburgerNav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

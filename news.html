@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منظمة سوشا</title>
+    <link rel="stylesheet" href="styles-news.css">
+     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+      <header>
+        <div class="header-container">
+            <!-- شعار دائري واسم المنظمة -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="logo.jpg" alt="SOSHA Logo" class="logo-img">
+                </a>
+                <div class="logo-text">SOSHA منظمة</div>
+            </div>
+
+<!-- قائمة التنقل الرئيسية -->
+<nav class="main-nav">
+    <ul class="navbar">
+        <li><a href="teams.html" class="nav-button">الفرق</a></li>
+        <!-- تعديل الرابط إلى projects.html -->
+        <li><a href="projects.html" class="nav-button">المشاريع</a></li>
+    </ul>
+</nav>
+
+
+            
+            <!-- أيقونة قائمة الهامبرغر -->
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <!-- قائمة الهامبرغر المخفية -->
+            <nav class="hamburger-nav">
+                <ul class="hamburger-navbar">
+                    <li><a href="about.html">عن المنظمة</a></li>
+                    <li><a href="news.html">أخبار المنظمة</a></li>
+                    <li><a href="#">الوظائف</a></li>
+                    <li><a href="#">اتصل بنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+ <h1>الأخبار</h1>
+    </header>
+
+    <main>
+        <section id="news-section">
+            <article class="news-item">
+                <h2>تحدي الكُتاب</h2>
+                <img src="event.jpg" alt="صورة الفعالية">
+                <p>تفاصيل الفاعلية</p>
+                <a href="#" class="btn">تحميل PDF</a>
+                <button class="btn" onclick="openRegistrationForm()">التسجيل</button>
+                <button class="btn" onclick="requestEdit(this)">تعديل</button>
+            </article>
+            <!-- يمكن إضافة المزيد من الأخبار هنا -->
+        </section>
+
+        <section id="blogs-section">
+            <h2>المقالات والمدونات</h2>
+            <article class="blog-item">
+                <h3>عنوان المقالة</h3>
+                <p>المؤلف: الكاتب</p>
+                <p class="content">محتوى المقالة...</p>
+                <button class="btn" onclick="requestEditBlog(this)">تعديل</button>
+                <button class="btn" onclick="confirmSubmission()">نشر المقالة</button>
+            </article>
+            <!-- يمكن إضافة المزيد من المقالات هنا -->
+        </section>
+    </main>
+
+    <!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="social-media-icons">
+            <a href="https://www.facebook.com/yourpage" target="_blank">
+                <img src="facebook-icon.png" alt="Facebook" class="social-icon">
+            </a>
+            <a href="https://yourchannel" target="_blank">
+                <img src="telegram-icon.png" alt="Telegram" class="social-icon">
+            </a>
+            <a href="https://www.instagram.com/yourprofile" target="_blank">
+                <img src="instagram-icon.png" alt="Instagram" class="social-icon">
+            </a>
+            <a href="https://www.wattpad.com/user/yourprofile" target="_blank">
+                <img src="wattpad-icon.png" alt="Wattpad" class="social-icon">
+            </a>
+        </div>
+        <div class="footer-links">
+            <div class="footer-links-left">
+                <a href="#">الأسئلة الشائعة (FAQ)</a>
+                <a href="#">الوظائف</a>
+                <a href="#">اتصل بنا</a>
+            </div>
+            <div class="footer-links-right">
+                <a href="#">سياسة الخصوصية</a>
+                <a href="#">الشروط والأحكام</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+ 
+ <script>
+        function toggleMenu() {
+            const hamburgerNav = document.querySelector('.hamburger-nav');
+            hamburgerNav.classList.toggle('active');
+        }
+         </script>
+          <div id="registration-form" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeRegistrationForm()">&times;</span>
+            <h2>نموذج التسجيل</h2>
+<form id="regForm">
+    <label for="name">الاسم:</label>
+    <input type="text" id="name" required placeholder="أدخل اسمك الكامل">
+
+    <label for="email">البريد الإلكتروني:</label>
+    <input type="email" id="email" required placeholder="أدخل بريدك الإلكتروني">
+
+    <label for="phone">رقم الهاتف:</label>
+    <input type="tel" id="phone" placeholder="أدخل رقم هاتفك (اختياري)">
+
+    <label for="birthdate">تاريخ الميلاد:</label>
+    <input type="date" id="birthdate" required>
+
+    <label for="link">حساب Instagram:</label>
+    <input type="url" id="link" placeholder="أدخل رابط حسابك على Instagram">
+
+    <button type="submit" class="btn">إرسال</button>
+</form>
+        </div>
+    </div>
+
+    <div id="edit-form" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeEditForm()">&times;</span>
+            <h2>تعديل المقالة</h2>
+            <form id="editBlogForm">
+                <label for="edit-title">العنوان:</label>
+                <input type="text" id="edit-title" required>
+                <label for="edit-content">المحتوى:</label>
+                <textarea id="edit-content" required></textarea>
+                <label for="edit-password">الرمز السري:</label>
+                <input type="password" id="edit-password" required>
+                <button type="submit" class="btn">تحديث</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,317 @@
+/* الأسلوب العام للجسم */
+body {
+    font-family: 'Cairo', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #ffffff;
+    direction: rtl;
+    line-height: 1.6;
+}
+
+/* حاوية عامة للأقسام */
+section {
+    width: 80%;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* عناوين الأقسام */
+h2 {
+    text-align: center;
+    color: #ff6600;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 6px;
+    background-color: #ff6600;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+/* النصوص في الأقسام */
+p {
+    text-align: justify;
+    font-size: 1.1em;
+    margin-bottom: 15px;
+    color: #ddd;
+}
+
+/* قسم تاريخ المنظمة */
+.timeline {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.timeline div {
+    width: 48%;
+    padding: 15px;
+    background-color: #2c2c2c;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.timeline div:hover {
+    background-color: #3a3a3a;
+}
+
+.timeline h3 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+/* قسم مؤسس المنظمة */
+.founder-section {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #1a1a1a; /* لون خلفية داكنة */
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(255, 102, 0, 0.3); /* ظل مضيء */
+    position: relative; /* لتمكين التأثيرات الإضافية */
+    overflow: hidden; /* لقص المحتوى الذي يتجاوز الحواف */
+    animation: slide-in 1s ease-out; /* إضافة تأثير انزلاق */
+}
+
+/* التأثيرات الديناميكية للإطار حول الصورة */
+.founder-section img {
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    border: 5px solid #ff6600; /* إطار برتقالي */
+    box-shadow: 0 0 20px rgba(255, 102, 0, 0.7); /* ظل مضيء حول الصورة */
+    transition: transform 0.5s ease, box-shadow 0.5s ease, border 0.5s ease; /* إضافة تأثيرات للتغيير */
+}
+
+/* تأثير التحويم على الصورة */
+.founder-section img:hover {
+    transform: rotate(360deg) scale(1.1); /* تدوير وتكبير الصورة */
+    box-shadow: 0 0 30px rgba(255, 102, 0, 1); /* زيادة اللمعان */
+    border: 5px solid #ff9900; /* تغيير لون الإطار عند التحويم */
+}
+
+/* تأثيرات النصوص */
+.founder-section h3 {
+    color: #ff6600; /* لون نص العنوان */
+    font-size: 2em; /* حجم الخط أكبر قليلاً */
+    margin-bottom: 10px;
+    animation: glow-text 1.5s infinite alternate; /* تأثير التوهج المتكرر */
+    text-shadow: 0 2px 5px rgba(255, 102, 0, 0.7); /* تأثير الظل */
+}
+
+.founder-section p {
+    font-size: 1.2em;
+    color: #ddd;
+    margin-bottom: 20px;
+    animation: fade-in 1.5s ease; /* تأثير التلاشي */
+}
+
+/* تأثيرات الروابط */
+.founder-section a {
+    display: inline-block;
+    padding: 12px 25px;
+    color: white;
+    background-color: #ff6600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 102, 0, 0.5); /* ظل أسفل الزر */
+    font-weight: bold; /* جعل النص أكثر وضوحًا */
+    text-transform: uppercase; /* تحويل النص إلى أحرف كبيرة */
+}
+
+/* تأثير التحويم على الرابط */
+.founder-section a:hover {
+    background-color: #e65c00;
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(255, 102, 0, 0.7); /* زيادة ظل الزر */
+    animation: pulse 1s infinite; /* تأثير نبضي عند التحويم */
+}
+
+/* تأثير التوهج للنصوص */
+@keyframes glow-text {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 102, 0, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 15px rgba(255, 102, 0, 1);
+    }
+}
+
+/* تأثير التلاشي للنصوص */
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* تأثير الحركة الديناميكية للبلوك */
+@keyframes slide-in {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* تأثير نبضي على الأزرار عند التحويم */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* قسم فريق القيادة */
+.team-section {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.team-section h2 {
+    color: #ff6600; /* نفس لون الإطار */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    animation: glow-text 1.5s infinite alternate;
+}
+
+/* إعدادات المربعات */
+.team-member {
+    display: inline-block;
+    width: calc(50% - 20px); /* لضمان تواجد 2 مربعات في الصف الواحد */
+    margin: 10px;
+    padding: 15px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    vertical-align: top; /* لتجنب التداخل في الصفوف */
+}
+
+/* الصور داخل المربعات */
+.team-member img {
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+    border: 3px solid #ff6600; /* إطار برتقالي */
+    box-shadow: 0 0 10px rgba(255, 102, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* تأثير التحويم على الصورة */
+.team-member img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 102, 0, 0.7);
+}
+
+/* النصوص داخل المربعات */
+.team-member h3 {
+    color: #ff6600;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.team-member p {
+    color: #ddd;
+    font-size: 0.9em;
+}
+
+/* تأثير التوهج للنصوص */
+@keyframes glow-text {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 102, 0, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 15px rgba(255, 102, 0, 1);
+    }
+}
+
+/* ترتيب المربعات بحيث كل 2 في صف واحد */
+@media (min-width: 600px) {
+    .team-member {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 599px) {
+    .team-member {
+        width: calc(100% - 20px);
+    }
+}
+
+/* قسم قيم المنظمة */
+.values-section {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #2c2c2c;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.values-item {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.values-item:hover {
+    transform: translateY(-5px);
+}
+
+/* تأثيرات الحركة */
+@keyframes slide-in {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,916 @@
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Global styles */
+body {
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Tahoma', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Header styles */
+header {
+  background: linear-gradient(90deg, #4b6cb7, #182848);
+  color: #fff;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* أيقونة قائمة الهامبرغر */
+.hamburger-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+
+/* قائمة الهامبرغر */
+.hamburger-nav {
+    display: none;
+    position: absolute;
+    top: 50px; /* يحدد الموقع بالنسبة لرأس الصفحة */
+    right: 30px;
+    background-color: #182848;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hamburger-navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hamburger-navbar li {
+    margin-bottom: 10px;
+}
+
+.hamburger-navbar li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hamburger-navbar li a:hover {
+    background-color: #4b6cb7;
+    color: #fff;
+}
+
+/* التأثير عند تفعيل القائمة */
+.hamburger-nav.active {
+    display: block;
+}
+
+/* تأثيرات عند التحويم */
+.hamburger-menu:hover .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger-menu:hover .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu:hover .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 0; /* إخفاء النص لتجنب تداخله مع الصورة */
+}
+
+.logo-img {
+  width: 60px; /* حجم الشعار */
+  height: 60px; /* حجم الشعار */
+  border-radius: 50%; /* تحويل الصورة إلى دائرة */
+  border: 3px solid #fff; /* إطار الشعار */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* تأثير الإضاءة */
+  transition: transform 0.3s, box-shadow 0.3s; /* تأثير ديناميكي */
+}
+
+.logo-img:hover {
+  transform: scale(1.1); /* تكبير الصورة عند التحويم */
+  box-shadow: 0 0 25px rgba(255, 255, 255, 1); /* زيادة الإضاءة عند التحويم */
+}
+
+.logo-text {
+  font-size: 14px;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.navbar {
+  display: flex;
+  list-style: none;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.navbar a:hover {
+  color: #ffcc00;
+  transform: translateY(-2px);
+}
+
+/* Hero section styles */
+.hero-section {
+  background: url('hero-background.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+  margin-top: 80px;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-title {
+  font-size: 50px;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+  font-size: 26px;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.cta-button {
+  background: #ff6600;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  margin: 0 10px;
+  font-size: 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.3s, transform 0.3s;
+  box-shadow: 0 5px 15px rgba(255, 102, 0, 0.4);
+}
+
+.cta-button:hover {
+  background: #e65c00;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 102, 0, 0.6);
+}
+
+/* 3D Effect Section Styles */
+.effect-section {
+  padding: 70px 20px;
+  text-align: center;
+  background: #1a1a1a;
+}
+
+.card-3d {
+  perspective: 1000px;
+  display: inline-block;
+  background: #2c2c2c;
+  border-radius: 20px;
+  padding: 30px;
+  transition: transform 0.6s;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-3d:hover {
+  transform: rotateY(20deg);
+}
+
+.card-content {
+  color: #fff;
+}
+
+.dynamic-button {
+  background: linear-gradient(90deg, #ff6600, #e65c00);
+  border: none;
+  padding: 15px 30px;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 5px 15px rgba(255, 102, 0, 0.4);
+}
+
+.dynamic-button:hover {
+  background: linear-gradient(90deg, #e65c00, #ff6600);
+  box-shadow: 0 10px 20px rgba(255, 102, 0, 0.6);
+}
+
+/* Dynamic Text Section Styles */
+.dynamic-text-section {
+  padding: 70px 20px;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.dynamic-box {
+  border: 1px solid #ff6600;
+  padding: 20px;
+  display: inline-block;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #ff6600;
+  }
+  50% {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #ff6600;
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 10px #ff6600;
+  }
+}
+
+/* إعدادات الفوتر */
+footer {
+  background: #182848; /* لون الخلفية */
+  color: #fff; /* لون النص */
+  padding: 30px 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column; /* ترتيب العناصر عموديًا */
+  align-items: center; /* محاذاة العناصر في الوسط */
+}
+
+/* إعدادات الأيقونات */
+.social-media-icons {
+  display: flex;
+  justify-content: center; /* محاذاة الأيقونات في الوسط */
+  gap: 20px; /* المسافة بين الأيقونات */
+  margin-bottom: 20px; /* المسافة أسفل الأيقونات */
+}
+
+.social-media-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ضبط حجم أيقونات التواصل الاجتماعي */
+.social-media-icons img {
+  width: 100%;
+  height: auto;
+  max-width: 32px; /* العرض الأقصى للأيقونة */
+  max-height: 32px; /* الطول الأقصى للأيقونة */
+  object-fit: contain;
+  display: block;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+/* تأثيرات عند التمرير فوق الأيقونة */
+.social-media-icons a:hover img {
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.7); /* إطار مضيء */
+  transform: scale(1.1); /* تكبير الأيقونة قليلاً */
+}
+
+/* إعدادات الروابط */
+.footer-links {
+  display: flex;
+  justify-content: center; /* محاذاة الروابط في الوسط */
+  gap: 40px; /* المسافة بين الأعمدة */
+  flex-wrap: wrap; /* السماح بلف العناصر في الأسطر */
+}
+
+.footer-links-left,
+.footer-links-right {
+  display: flex;
+  flex-direction: column; /* ترتيب الروابط عموديًا */
+}
+
+.footer-links a {
+  display: block;
+  margin: 1px 0; /* المسافة بين الروابط */
+  padding: 10px 20px;
+  background: #333; /* خلفية الأزرار */
+  color: #fff; /* لون النص */
+  text-decoration: none;
+  border-radius: 5px; /* زوايا دائرية */
+  font-size: 10px;
+  transition: background 0.3s, transform 0.3s; /* تأثيرات ديناميكية */
+  text-align: center;
+}
+
+.footer-links a:hover {
+  background: #ff6600; /* لون خلفية الأزرار عند التمرير */
+  transform: scale(1.05); /* تكبير الأزرار قليلاً عند التمرير */
+}
+.footer-copy {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #ddd;
+}
+
+
+
+
+/* Teams Section Styles */
+.teams-section {
+  padding: 70px 20px;
+  background-color: #1a1a1a; /* خلفية داكنة */
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  color: #ffffff; /* نص أبيض */
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.section-description {
+  font-size: 18px;
+  color: #cccccc; /* نص رمادي فاتح */
+  margin-bottom: 50px;
+}
+
+.teams-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.team-card {
+  background: #2c2c2c; /* لون الخلفية للكارد */
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  text-align: center;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.team-img {
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.team-name {
+  font-size: 22px;
+  color: #ffcc00; /* لون النص أصفر */
+  margin-bottom: 10px;
+}
+
+.team-code,
+.team-members,
+.team-strength {
+  font-size: 16px;
+  color: #ffffff; /* نص أبيض */
+  margin-bottom: 5px;
+}
+
+.team-description {
+  font-size: 16px;
+  color: #cccccc; /* نص رمادي فاتح */
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.team-rank-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+}
+
+.dynamic-button {
+  background: linear-gradient(90deg, #ff6600, #e65c00); /* تدرج برتقالي */
+  border: none;
+  padding: 10px 20px;
+  color: #fff; /* نص أبيض */
+  font-size: 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  box-shadow: 0 5px 15px rgba(255, 102, 0, 0.4);
+}
+
+.dynamic-button:hover {
+  background: linear-gradient(90deg, #e65c00, #ff6600);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 102, 0, 0.6);
+}
+
+/* Team Details Section Styles */
+.team-details-section {
+  padding: 70px 20px;
+  background-color: #1a1a1a; /* خلفية داكنة */
+  text-align: center;
+}
+
+.section-title {
+  font-size: 36px;
+  color: #ffffff; /* نص أبيض */
+  margin-bottom: 40px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Team Description Styles */
+.team-description {
+  background-color: #2c2c2c; /* لون الخلفية */
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 40px;
+  color: #cccccc; /* نص رمادي فاتح */
+}
+
+.team-description h2 {
+  font-size: 28px;
+  color: #ffcc00; /* لون النص أصفر */
+  margin-bottom: 20px;
+}
+
+/* Team Members Styles */
+.team-members {
+  margin-bottom: 40px;
+}
+
+.team-members h2 {
+  font-size: 28px;
+  color: #ffcc00; /* لون النص أصفر */
+  margin-bottom: 20px;
+}
+
+.member-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.member-card {
+  background: #2c2c2c; /* لون الخلفية للكارد */
+  border-radius: 20px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.member-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.member-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+.member-name {
+  font-size: 20px;
+  color: #ffffff; /* نص أبيض */
+  margin-bottom: 5px;
+}
+
+.member-role {
+  font-size: 16px;
+  color: #cccccc; /* نص رمادي فاتح */
+}
+
+/* Team Projects Styles */
+.team-projects {
+  margin-bottom: 40px;
+}
+
+.team-projects h2 {
+  font-size: 28px;
+  color: #ffcc00; /* لون النص أصفر */
+  margin-bottom: 20px;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.project-card {
+  background: #2c2c2c; /* لون الخلفية للكارد */
+  border-radius: 20px;
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-img {
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.project-name {
+  font-size: 22px;
+  color: #ffffff; /* نص أبيض */
+  margin-bottom: 10px;
+}
+
+.project-description {
+  font-size: 16px;
+  color: #cccccc; /* نص رمادي فاتح */
+  margin-bottom: 20px;
+}
+
+.dynamic-button {
+  background: linear-gradient(90deg, #ff6600, #e65c00); /* تدرج برتقالي */
+  border: none;
+  padding: 10px 20px;
+  color: #fff; /* نص أبيض */
+  font-size: 16px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+  box-shadow: 0 5px 15px rgba(255, 102, 0, 0.4);
+}
+
+.dynamic-button:hover {
+  background: linear-gradient(90deg, #e65c00, #ff6600);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 102, 0, 0.6);
+}
+
+
+/* التنسيق الأساسي */
+body {
+    font-family: 'Tahoma', sans-serif;
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background-color 0.3s ease;
+    direction: ltr; /* جعل اتجاه النص من اليمين إلى اليسار */
+}
+
+/* الحاوية الأساسية */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* العناوين الرئيسية */
+.section-title {
+    font-size: 3rem;
+    color: #ffcc00;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.section-description {
+    font-size: 1.3rem;
+    color: #b0b0b0;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* تنسيق قائمة المشاريع */
+.projects-section {
+    padding: 80px 0;
+    background-color: #2a2a2a;
+    border-top: 4px solid #ffcc00;
+    border-bottom: 4px solid #ffcc00;
+}
+
+.project-filter {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.filter-dropdown {
+    padding: 12px;
+    font-size: 1.1rem;
+    border: 2px solid #ffcc00;
+    border-radius: 8px;
+    background-color: #333;
+    color: #ffcc00;
+    transition: border-color 0.3s ease;
+}
+
+.filter-dropdown:hover {
+    border-color: #e6b800;
+}
+
+/* تنسيق بطاقات المشروع */
+.projects-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.project-card {
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    width: calc(33.333% - 20px);
+    margin-bottom: 30px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) rotate(3deg);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
+}
+
+.project-img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 204, 0, 0.5);
+}
+
+.project-name {
+    font-size: 1.7rem;
+    color: #ffcc00;
+    margin: 10px 0;
+}
+
+.project-status {
+    font-size: 1rem;
+    color: #a0a0a0;
+    margin-bottom: 15px;
+}
+
+/* زر ديناميكي */
+.dynamic-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    color: #ffffff;
+    background-color: #e67e22;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(230, 126, 34, 0.4);
+}
+
+.dynamic-button:hover {
+    background-color: #d35400;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(211, 84, 0, 0.5);
+}
+
+/* تنسيق تفاصيل المشروع */
+.project-details-section {
+    padding: 80px 0;
+    background-color: #1a1a1a;
+}
+
+.project-description h2, 
+.project-timeline h2, 
+.project-team h2, 
+.project-deliverables h2, 
+.project-media h2 {
+    font-size: 2.2rem;
+    color: #ffcc00;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.project-timeline ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-timeline ul li {
+    font-size: 1.1rem;
+    color: #cccccc;
+    padding: 5px 0;
+    position: relative;
+    padding-right: 20px;
+    text-align: right; /* محاذاة النص إلى اليمين */
+}
+
+.project-timeline ul li:before {
+    content: "•";
+    color: #ffcc00;
+    position: absolute;
+    right: 0; /* وضع النقطة على الجانب الأيمن */
+    top: 0;
+}
+
+.team-members {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.member-card {
+    background-color: #2c2c2c;
+    border: 1px solid #444;
+    border-radius: 12px;
+    width: calc(50% - 20px);
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.member-img {
+    max-width: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: box-shadow 0.3s ease;
+}
+
+.member-img:hover {
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+}
+
+.member-name {
+    font-size: 1.4rem;
+    color: #ffcc00;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    font-size: 1rem;
+    color: #a0a0a0;
+}
+
+.project-media-img, .project-video {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.project-video {
+    width: 100%;
+}
+
+/* استجابة التصميم */
+@media (max-width: 768px) {
+    .projects-list, .team-members {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card, .member-card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .section-description {
+        font-size: 1.1rem;
+    }
+}
+/* تنسيق تفاصيل المشروع */
+.project-details-section {
+    padding: 60px 20px; /* تعديل الفواصل لتكون أكثر توازنًا */
+    background-color: #1a1a1a;
+}
+
+/* تحسين تنسيق العناوين الرئيسية والفرعية */
+.project-description h2, 
+.project-timeline h2, 
+.project-team h2, 
+.project-deliverables h2, 
+.project-media h2 {
+    font-size: 2rem; /* تقليل حجم الخط للعناوين */
+    color: #ffcc00;
+    margin-bottom: 20px;
+    text-align: center; /* محاذاة العنوان في المنتصف */
+    text-transform: uppercase;
+    letter-spacing: 1px; /* زيادة التباعد بين الحروف */
+    border-bottom: 2px solid #ffcc00; /* إضافة خط سفلي لتوضيح العناوين */
+    padding-bottom: 10px; /* إضافة مساحة أسفل العنوان لتعزيز الفواصل */
+    margin-top: 40px; /* إضافة مسافة أعلى العنوان لتعزيز الفواصل */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* تنسيق العناوين الفرعية */
+.project-description p, 
+.project-timeline p, 
+.project-team p, 
+.project-deliverables p, 
+.project-media p {
+    font-size: 1.1rem; /* تحسين حجم الخط للنصوص الفرعية */
+    color: #cccccc;
+    margin-bottom: 20px;
+    text-align: justify; /* محاذاة النص ليكون أكثر توازنًا */
+    line-height: 1.8; /* تحسين تباعد الأسطر لتسهيل القراءة */
+}
+.section-title, .project-details-section h2 {
+  scroll-margin-top: 80px; /* تعويض ارتفاع الـ header */
+}
+body {
+  padding-top: 80px; /* تعويض ارتفاع الـ header */
+}
